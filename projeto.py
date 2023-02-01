@@ -34,19 +34,12 @@ while True:
                 tradutor = rec.recognize_google(audio, language="pt-BR")
                 if lista_palavras.count(tradutor) == 0:
                     messagebox.showerror("ERRO!", f"A FRASE: '{tradutor}' NÃO E INDENTIFICADA COMO UM CURSO CLIQUE NO 'OK' E REPITA")
-
                     del tradutor
                     continue
                 elif tradutor != "":
                     print(tradutor)
                     window.close()
 
-                '''if tradutor == "informática":
-                    retorno3 = messagebox.showinfo("!!!!", "CRIANDO O CAMINHO!!!!")
-                    if retorno3 == "ok":
-                        imagem = cv2.imread("imgs/pavimento_terreo.jpg")
-                        imagem = cv2.resize(imagem, (int(2516/2), int(1259/2)))
-                        cv2.imshow("CAMINHO", imagem)'''
 
     except Exception as erro:
 
